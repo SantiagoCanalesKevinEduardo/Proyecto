@@ -14,8 +14,6 @@ public class alumnosMatriculados {
     private static ArrayList<Alumno> listaAlumnosMatriculados ;
     private static boolean  existencia ;
     public alumnosMatriculados() {
-
-        
         
     }
     public   ArrayList<Alumno> listaDeMatriculados(){
@@ -26,6 +24,7 @@ public class alumnosMatriculados {
         Alumno a1 = new Alumno("Facultad de geología, minas y civil","Ingeniería de Sistemas","100","impar","enero 30, 2000", 
                 mallaCurricular.getMallaCurricular(),
                 "selene1","Jhosep" , "Arango Medina", 15, "M", 123, 98898887,"Jr. Euler 225");
+        //modificacion de las notas de los cursos del alumno1
         a1.getMallaCurricular().get(0).setNota(12);
         a1.getMallaCurricular().get(1).setNota(12);
         a1.getMallaCurricular().get(2).setNota(12);
@@ -34,6 +33,7 @@ public class alumnosMatriculados {
 
         Alumno a2 = new Alumno("Facultad de geología, minas y civil","Ingeniería de Sistemas","100","impar","febrero 30, 2000", mallaCurricular.getMallaCurricular(),
                 "selene2","karla" , "Candia Medina", 15, "F", 1234, 98898887,"Jr. Tres mascaras 223");
+        //modificacion de las notas de los cursos del alumno2
         a2.getMallaCurricular().get(0).setNota(12);
         a2.getMallaCurricular().get(1).setNota(12);
         a2.getMallaCurricular().get(2).setNota(12);
@@ -44,10 +44,10 @@ public class alumnosMatriculados {
         listaAlumnosMatriculados.add(a1);
         listaAlumnosMatriculados.add(a2);
         listaAlumnosMatriculados.add(a3);
- 
         return listaAlumnosMatriculados;
     }
     public  boolean existeUsuario(int nroDni){
+        //con este metodo se verfica que haya un solo usuario a travez del nroDni
         existencia =true;
         for (int i=0; i<listaDeMatriculados().size();i++){
             if (listaDeMatriculados().get(i).getDNI()!= nroDni){

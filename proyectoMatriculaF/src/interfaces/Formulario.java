@@ -11,7 +11,6 @@ import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import clases.Alumno;
-
 import clases.Padre;
 import javax.swing.JOptionPane;
 
@@ -39,7 +38,6 @@ public class Formulario extends javax.swing.JFrame {
         this.setLocationRelativeTo(null);
     }
     
-    //para poder usarlo en otras clases hago atributo al objeto alumno
 
   
 
@@ -416,12 +414,14 @@ public class Formulario extends javax.swing.JFrame {
             JOptionPane.showMessageDialog(null, "Hay espacios vacios, ingrese todos sus datos");
 
         } else {
-            //verificar existencia de usuario
+            //verificar existencia de usuario se realiza a travez del dni
+            
             if (alumnos.existeUsuario(Integer.parseInt(txt_dniAlumno.getText()))==false) {
                 System.out.println(Integer.parseInt(txt_dniAlumno.getText()));
                 
                 JOptionPane.showMessageDialog(null, "el usuario ya existe");
             } 
+            
             else {
                 //verificar que contraseña y confirmar contraseña sean iguales
                 if (txtPassword.getText().equals(txtConfirmarPassword.getText())) {

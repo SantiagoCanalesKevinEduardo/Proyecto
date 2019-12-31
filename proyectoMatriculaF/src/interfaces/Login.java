@@ -27,6 +27,8 @@ public class Login extends javax.swing.JFrame {
         indiceListaAlumno = 0;
 
         boolean existeUsuario = false;
+        //se uso un try y catch para evitar el error de cuando el txt_Usuario sean letras
+        
         try {
             for (int i = 0; i < alumnos.listaDeMatriculados().size(); i++) {
                 if (!alumnos.listaDeMatriculados().get(i).getPassword().equals(txt_Contraseña.getText())
@@ -35,6 +37,9 @@ public class Login extends javax.swing.JFrame {
                     existeUsuario = false;
                 } else if (alumnos.listaDeMatriculados().get(i).getPassword().equals(txt_Contraseña.getText())
                         && alumnos.listaDeMatriculados().get(i).getDNI() == Integer.parseInt(txt_Usuario.getText())) {
+                    
+                    
+                    //de aqui obtendre el indice del alumno logeado
                     indiceListaAlumno = i;
                     System.out.println(i);
 

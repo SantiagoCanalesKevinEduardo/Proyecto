@@ -15,6 +15,7 @@ public class MatriculaCursos extends javax.swing.JFrame {
     DefaultTableModel model = new DefaultTableModel();
     private static alumnosMatriculados alumnos ;
     mallaCurricular a ;
+    // objeto del tipo log de aqui se sacara el indicedel alumno logeado
     private static Login log ;
     public MatriculaCursos() {
         
@@ -29,48 +30,19 @@ public class MatriculaCursos extends javax.swing.JFrame {
         log= new Login();
         alumnos = new alumnosMatriculados();
         a = new mallaCurricular();
+        
+        
+        
+        //imprimo solo para probar que el indice del alumno logeado sea correcto ///
         System.out.println(log.getIndiceListaAlumno());
-        try{
-        for (int i =0; i <mallaCurricular.getMallaCurricular().size();i++){
-            if (alumnos.listaDeMatriculados().get(log.getIndiceListaAlumno()).getMallaCurricular().
-                    get(i).getTipo().equals("R") &&
-                    alumnos.listaDeMatriculados().get(log.getIndiceListaAlumno()).getMallaCurricular().
-                    get(i).getRequisito()==null &&
-                    alumnos.listaDeMatriculados().get(log.getIndiceListaAlumno()).getMallaCurricular().
-                    get(i).getNota()<10.5||
-                    alumnos.listaDeMatriculados().get(log.getIndiceListaAlumno()).getMallaCurricular().
-                    get(i).getTipo().equals("R") &&
-                    alumnos.listaDeMatriculados().get(log.getIndiceListaAlumno()).getMallaCurricular().
-                    get(i).getRequisito().getNota()<10.5 &&
-                    alumnos.listaDeMatriculados().get(log.getIndiceListaAlumno()).getMallaCurricular().
-                    get(i).getNota()<10.5){
-                
-                
-                
-                
-                box1.addItem(alumnos.listaDeMatriculados().get(log.getIndiceListaAlumno()).getMallaCurricular().
-                    get(i).getNombreCurso());
-                
-                
-            }
-            else if (alumnos.listaDeMatriculados().get(log.getIndiceListaAlumno()).getMallaCurricular().
-                    get(i).getTipo().equals("Co")&&
-                    alumnos.listaDeMatriculados().get(log.getIndiceListaAlumno()).getMallaCurricular().
-                    get(i)==null && alumnos.listaDeMatriculados().get(log.getIndiceListaAlumno()).getMallaCurricular().
-                    get(i).getNota()<10.5){
-                box2.addItem(alumnos.listaDeMatriculados().get(log.getIndiceListaAlumno()).getMallaCurricular().
-                    get(i).getNombreCurso());
-            }else{
-                
-            }
-        }
-        }catch(Exception e){
-            
-        }
-}
-      
-    
+  
 
+        
+      
+           
+            
+        
+}
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
