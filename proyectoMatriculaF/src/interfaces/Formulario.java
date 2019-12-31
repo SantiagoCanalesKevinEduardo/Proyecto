@@ -474,7 +474,7 @@ public class Formulario extends javax.swing.JFrame {
                     malla = new mallaCurricular();
 
                     //instancia del objeto alumno
-                    alumno = new Alumno(fechaAlumno, mallaCurricular.getMallaCurricular(), txtPassword.getText(), nomAlumno,
+                    alumno = new Alumno(fechaAlumno, mallaCurricular.CursosSistemas(), txtPassword.getText(), nomAlumno,
                             apeAlumno, i, sexoAlumno, d, t, dirAlumno, "100", "impar");
 
                     // 100 e impar son la serie y el semestre , cuando el alumno se registra entonces 
