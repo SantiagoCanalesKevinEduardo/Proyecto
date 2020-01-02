@@ -10,24 +10,28 @@ public class Curso {
     private String sigla;
     private String nombreCurso;
     private String tipo;//si es regular o coorricular 
-    private Curso requisito;//curso "A" que se necesita aprobar para llevar el curso "B" 
-    private String semestre;//lo sacamos
-    private String serie;//no sirve
+    private Curso requisito;
+    private String semestre;
+    private String serie;
     private double creditos;
-    private int nota;
-    private int indice;
-    private boolean estado;
+    private  int nota;
+   
+
+  
+
     // se usara en la malla curricular 
     public Curso(String sigla, String nombreCurso, String tipo, Curso requisito, String semestre, 
-            String serie, int creditos) {
+            String serie, double creditos) {
+        
         this.sigla = sigla;
         this.nombreCurso = nombreCurso;
         this.tipo = tipo;
-        this.requisito = requisito;
         this.semestre = semestre;
         this.serie = serie;
         this.creditos = creditos;
+        this.requisito = requisito;
     }
+
     
 
     public String getSemestre() {
@@ -42,13 +46,11 @@ public class Curso {
         this.serie = serie;
     }
 
-    public int getIndice() {
-        return indice;
+    public void setRequisito(Curso requisito) {
+        this.requisito = requisito;
     }
 
-    public void setIndice(int indice) {
-        this.indice = indice;
-    }
+    
     
 
     public void setSemestre(String semestre) {
@@ -68,8 +70,8 @@ public class Curso {
         return requisito;
     }
 
-    public void setRequisito(Curso requisito) {
-        this.requisito = requisito;
+    public void setNota(int nota) {
+        this.nota = nota;
     }
     
 
@@ -100,29 +102,5 @@ public class Curso {
     public int getNota() {
         return nota;
     }
-
-    public void setNota(int nota)
-    {
-        if (nota>=0 && nota <=20){
-            this.nota = nota;
-        }else{
-            this.nota=0;
-        }
-        
-    }
-    public boolean isEstado() {
-        if (getNota() >=10.5 ){
-            this.estado =true;
-            return this.estado;
-        }else{
-            this.estado=false;
-            return this.estado;
-        }
-        
-    }
-
-  
-    
-    
-    
+   
 }

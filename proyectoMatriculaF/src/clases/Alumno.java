@@ -7,7 +7,7 @@ public class Alumno extends Persona{
     private String serie;
     private String fechaNacimiento;
     private ArrayList<Curso> mallaCurricular;//importante 
-    private ArrayList<Curso> asignaturasMatriculadas;
+    private ArrayList<Curso> asignaturasAprobados= new ArrayList<>();
     private String password;
 
     public Alumno() {
@@ -36,7 +36,7 @@ public class Alumno extends Persona{
         this.password = password;
         this.semestre= semestre;
         this.serie=serie;
-        asignaturasMatriculadas= new ArrayList<>();
+        asignaturasAprobados= new ArrayList<>();
     }
 
     //clase importante///////////////////
@@ -60,8 +60,8 @@ public class Alumno extends Persona{
         this.mallaCurricular = mallaCurricular;
     }
 
-    public ArrayList<Curso> getAsignaturasMatriculadas() {
-        return asignaturasMatriculadas;
+    public ArrayList<Curso> getAsignaturasAprobadas() {
+        return asignaturasAprobados;
     }
 
 

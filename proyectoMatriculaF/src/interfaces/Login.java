@@ -3,23 +3,20 @@ package interfaces;
 
 import BaseDatos.alumnosMatriculados;
 
-
 import javax.swing.JOptionPane;
-
 public class Login extends javax.swing.JFrame {
-    private static alumnosMatriculados alumnos;
+    private alumnosMatriculados alumnos;
     private static int indiceListaAlumno;
     //se usara este metodo en a sigueinte clase
     public int getIndiceListaAlumno() {
         return indiceListaAlumno;
     }
-    
+  
     public Login() {
         initComponents();
         this.setLocationRelativeTo(null);
 
     }
-   
     ///¨******;********************************************************/////
     //codigo para verificar si la contraseña y el usario existen
     public boolean existencia (){
@@ -30,15 +27,14 @@ public class Login extends javax.swing.JFrame {
         //se uso un try y catch para evitar el error de cuando el txt_Usuario sean letras
         
         try {
-            for (int i = 0; i < alumnos.listaDeMatriculados().size(); i++) {
-                if (!alumnos.listaDeMatriculados().get(i).getPassword().equals(txt_Contraseña.getText())
-                        && alumnos.listaDeMatriculados().get(i).getDNI() != Integer.parseInt(txt_Usuario.getText())) {
+            for (int i = 0; i < alumnosMatriculados.listaAlumnosMatriculados.size(); i++) {
+                if (!alumnosMatriculados.listaAlumnosMatriculados.get(i).getPassword().equals(txt_Contraseña.getText())
+                        && alumnosMatriculados.listaAlumnosMatriculados.get(i).getDNI() != Integer.parseInt(txt_Usuario.getText())) {
 
                     existeUsuario = false;
-                } else if (alumnos.listaDeMatriculados().get(i).getPassword().equals(txt_Contraseña.getText())
-                        && alumnos.listaDeMatriculados().get(i).getDNI() == Integer.parseInt(txt_Usuario.getText())) {
-                    
-                    
+                } else if (alumnosMatriculados.listaAlumnosMatriculados.get(i).getPassword().equals(txt_Contraseña.getText())
+                        && alumnosMatriculados.listaAlumnosMatriculados.get(i).getDNI() == Integer.parseInt(txt_Usuario.getText())) {
+
                     //de aqui obtendre el indice del alumno logeado
                     indiceListaAlumno = i;
                     System.out.println(i);
@@ -195,8 +191,7 @@ public class Login extends javax.swing.JFrame {
 
     private void btn_ContinuarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btn_ContinuarActionPerformed
             
-            if (existencia()==true){
-               
+            if (existencia()==true){ 
                 MatriculaCursos a = new MatriculaCursos();
                 a.setVisible(true);
                 dispose();
