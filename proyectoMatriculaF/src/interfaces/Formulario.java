@@ -461,7 +461,11 @@ public class Formulario extends javax.swing.JFrame {
                     malla = new mallaCurricular();
 
                     //instancia del objeto alumno
+<<<<<<< HEAD
                     alumno = new Alumno(fechaAlumno, mallaCurricular._mallaSistemas, txtPassword.getText(), nomAlumno,
+=======
+                    alumno = new Alumno(fechaAlumno, mallaCurricular.CursosSistemas(), txtPassword.getText(), nomAlumno,
+>>>>>>> d0064e4ab89c70e1c4de5735591789a01a12bb90
                             apeAlumno, i, sexoAlumno, d, t, dirAlumno, "100", "impar");
                     alumno.setFacultad("FACULTAD DE INGENIERÍA MINAS Y CIVIL");
                     alumno.setProfesion("Ingeniería de Sistemas");

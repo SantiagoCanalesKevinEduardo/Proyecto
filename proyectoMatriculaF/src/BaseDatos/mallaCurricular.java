@@ -7,7 +7,23 @@ public class mallaCurricular {
     //constructor sin parametros
     
     public mallaCurricular() {
+<<<<<<< HEAD
          //Creamos el array
+=======
+        
+    }
+    //malla curricular de ingenieria de sistemas
+    private  static ArrayList<Curso> _mallaSistemas ;
+    
+
+    
+    public static ArrayList<Curso> CursosSistemas(){
+        
+    //-----------------SERIE 100---------------------//
+    //-------------------*IMPAR*--------------------------//
+    
+        //Creamos el array
+>>>>>>> d0064e4ab89c70e1c4de5735591789a01a12bb90
         _mallaSistemas = new ArrayList<>();
         
         //curso Matematica Basica
@@ -86,6 +102,7 @@ public class mallaCurricular {
         
         Curso macro = new Curso("EC-241","Macroeconomía", "R",micro, "impar", "200", 3);
         _mallaSistemas.add(macro);
+<<<<<<< HEAD
         
         //-------------------*PAR*----------------------//
         Curso invesOpera = new Curso("IS-262","Investigación de Operaciones", "R",algeLin , "par", "200",4 );
@@ -151,8 +168,82 @@ public class mallaCurricular {
         Curso sisOper = new Curso("IS-344","Sistemas Operativos", "R",sisArquiComp , "par", "300", 4);
         _mallaSistemas.add(sisOper);
         
+=======
+        
+        //-------------------*PAR*----------------------//
+        Curso invesOpera = new Curso("IS-262","Investigación de Operaciones", "R",algeLin , "par", "200",4 );
+        _mallaSistemas.add(invesOpera);
+        
+        Curso metNum = new Curso("IS-242","Métodos Númericos", "R",calIII, "par", "200", 3);
+        _mallaSistemas.add(metNum);
+        
+        Curso estadiII = new Curso("ES-244","Estadistica II", "R",estadiI, "par", "200", 4);
+        _mallaSistemas.add(estadiII);
+        
+        Curso orgMet = new Curso("IS-248","Organización de Métodos", "R",admi, "par", "200", 3);
+        _mallaSistemas.add(orgMet);
+        
+        Curso teorGenSis = new Curso("IS-246","Teoria General de Sistemas", "R",null, "par", "200", 3);
+        _mallaSistemas.add(teorGenSis);
+        
+        Curso sisElecElec = new Curso("IS-244","Sist. Eléctricos y Electrónicos", "R",fisicaII, "par", "200", 5);
+        _mallaSistemas.add(sisElecElec);
+        
+        Curso arteMusTea = new Curso("AC-222","Arte Misical y Teatral", "Co",null, "par", "200", 2);
+        _mallaSistemas.add(arteMusTea);
+        
+        //-----------------------------SERIE 300------------------------------//
+        //-----------------------------*IMPAR*---------------------------------//
+        Curso invesOperaII = new Curso("IS-347","Investigación de Operaciones II", "R",invesOpera , "impar", "300",4 );
+        _mallaSistemas.add(invesOperaII);
+        
+        Curso contGenl = new Curso("CO-341","Contabilidad General", "R",null, "impar", "300", 3);
+        _mallaSistemas.add(contGenl);
+        
+        Curso lider = new Curso("CS-341","Liderazgo", "R",null, "impar", "300", 2);
+        _mallaSistemas.add(lider);
+        
+        Curso MetSisBlan = new Curso("IS-343","Metodologia de Sistemas Blandos", "R",teorGenSis, "impar", "300", 3);
+        _mallaSistemas.add(MetSisBlan);
+        
+        Curso planSisInf = new Curso("IS-345","Modelamiento de Datos", "R",orgMet, "impar", "300", 4);
+        _mallaSistemas.add(planSisInf);
+        
+        Curso sisArquiComp = new Curso("IS-341","Sist. Digitales y Arquitectura de Computadoras", "R",sisElecElec, "impar", "300", 4);
+        _mallaSistemas.add(sisArquiComp);
+        
+        Curso realNaci = new Curso("CS-321","Realidad Nacional", "Co",null, "impar", "300", 2);
+        _mallaSistemas.add(arteMusTea);
+        
+        //---------------------------*PAR*-----------------------------------//
+        Curso teoriDecis = new Curso("IS-342","Teoria de Decisiones", "R",invesOperaII , "par", "300",3 );
+        _mallaSistemas.add(teoriDecis);
+        
+        Curso sisCos = new Curso("CO-342","Contabilidad General", "R",contGenl, "par", "300", 3);
+        _mallaSistemas.add(sisCos);
+        
+        Curso SisInfI = new Curso("IS-362","Sistemas de Información", "R",planSisInf, "par", "300", 4);
+        _mallaSistemas.add(SisInfI);
+        
+        Curso modDat = new Curso("IS-348","Modelamiento de Datos", "R",planSisInf, "par", "300", 4);
+        _mallaSistemas.add(modDat);
+        
+        Curso sisDin = new Curso("IS-345","Sistemas Dinámicos", "R",MetSisBlan, "par", "300", 3);
+        _mallaSistemas.add(sisDin);
+        
+        Curso sisOper = new Curso("IS-344","Sistemas Operativos", "R",sisArquiComp , "par", "300", 4);
+        _mallaSistemas.add(sisOper);
+        
+       
+        return _mallaSistemas;
+>>>>>>> d0064e4ab89c70e1c4de5735591789a01a12bb90
+        
         
     }
+<<<<<<< HEAD
     //malla curricular de ingenieria de sistemas
 
+=======
+ 
+>>>>>>> d0064e4ab89c70e1c4de5735591789a01a12bb90
 }
